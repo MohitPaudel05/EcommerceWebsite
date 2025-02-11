@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{%block title% } Log In{% endblock %title}
+{% block content %}
+
+<section id="hero" class="hero section dark-background ">
+   
+   
+
+
+    <!-- Background Image -->
+    <img src="../../static\assets\img\pexels-lum3n-44775-399161.jpg" alt="non" data-aos="fade-in" style="height: 100vh; object-fit: cover; width: 100%;">
+    
+
+    <!-- Centered Content (Form) -->
+    <div class="container d-flex align-items-center justify-content-center" style="height: 100vh;">
+       
+        <div class="row justify-content-center w-100">
+            <div class="col-lg-8">
+                <form method="POST" action="/auth/login/" class="p-4 border rounded w-50 mx-auto" style="background: rgba(255, 255, 255, 0);">
+                    {% csrf_token %}
+                    {% for message in messages %}
+                    <div class="alert alert-warning -{{message.tags}}alert-dismissible fade show" role="alert">
+                    <strong>{{message}}</strong> 
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    {% endfor %}
+                    
+                    <h1 class = 'text-center'>Log In</h1>
+                
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
+                    </div>
+                    
+                
+                    <button type="submit" class="btn btn-dark w-100">Log In</button>
+                    <br>
+                    New user? <a href="/auth/signup/">Sign Up</a>
+                </form>
+            
+                
+            </div>
+        </div>
+    </div>
+
+</section><!-- /Hero Section -->
+{% endblock content %}
