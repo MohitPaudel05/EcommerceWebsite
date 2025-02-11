@@ -1,0 +1,9 @@
+
+EMAIL_HOST='abcd'
+EMAIL_HOST_USER='your_host_user_email_id'
+EMAIL_HOST_PASSWORD='abcd'
+EMAIL_PORT="XXX"
+EMAIL_USE_TLS="boolean"
+EMAIL_BACKEND='abcd'
+
+SECRET_KEY = 'abcd'
