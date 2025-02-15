@@ -121,7 +121,7 @@ USE_TZ = True
 
 
 
-#sending emails
+#sending email to user to activate 
 
 # EMAIL_HOST= os.getenv("EMAIL_HOST")
 # EMAIL_HOST_USER= os.getenv("EMAIL_HOST_USER")
