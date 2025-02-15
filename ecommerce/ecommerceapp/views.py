@@ -13,7 +13,7 @@ def contact(request):
         desc=request.POST.get("desc")
         phonenumber=request.POST.get("phonenumber")
         myquery=Contact(name=name,email=email,desc=desc,phonenumber=phonenumber)
-        # myquery=Contact(name=name,desc=desc,phonenumber=phonenumber)
+        
         myquery.save()
         messages.info(request," we will get back to you soon")
         return render(request, "contact.html")
